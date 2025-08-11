@@ -1,67 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Basket Stablecoin (BSKTx) – a blockchain-native stablecoin backed by a diversified basket of real-world assets, running on Ethereum and Base Sepolia testnet.">
-  <meta property="og:title" content="Basket Stablecoin (BSKTx)">
-  <meta property="og:description" content="Blockchain-native, globally accessible stablecoin backed by copper, sugar, natural gas, and U.S. Treasuries.">
-  <meta property="og:image" content="images/social-card.png">
-  <meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Basket Stablecoin (BSKTx) – a blockchain-native stablecoin backed by a diversified basket of real-world assets, running on Ethereum and Base Sepolia testnet." />
+  <meta property="og:title" content="Basket Stablecoin (BSKTx)" />
+  <meta property="og:description" content="Blockchain-native, globally accessible stablecoin backed by copper, sugar, natural gas, and U.S. Treasuries." />
+  <!-- For link previews, OG images work best as absolute URLs -->
+  <!-- Replace <user> and <repo> or paste your full image URL below -->
+  <meta property="og:image" content="https://<user>.github.io/<repo>/images/social-card.png" />
+  <meta property="og:type" content="website" />
   <title>Basket Stablecoin (BSKTx)</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0f172a;
-      color: white;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      padding: 2rem;
-      background: linear-gradient(90deg, #2563eb, #14b8a6);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    video {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .social-card {
-      max-width: 400px;
-      margin: 1rem auto;
-      border-radius: 10px;
-      display: block;
-    }
-    footer {
-      padding: 1rem;
-      background-color: #1e293b;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    :root { --bg:#0f172a; --panel:#1e293b; --link:#38bdf8; }
+    body { font-family: Arial, sans-serif; background:var(--bg); color:#fff; margin:0; text-align:center; }
+    header { padding: 1.5rem 1rem; background: linear-gradient(90deg,#2563eb,#14b8a6); }
+    .brand { max-width: 1000px; margin: 0 auto; display:flex; align-items:center; gap:12px; }
+    .brand img { width:56px; height:56px; border-radius:12px; object-fit:contain; background:rgba(255,255,255,.12); padding:6px; }
+    .brand h1 { margin:0; font-size:2rem; line-height:1.1; }
+    .brand p { margin:.25rem 0 0; opacity:.9 }
+    main { max-width: 800px; margin: auto; padding: 2rem 1rem; }
+    section { margin-bottom: 2rem; }
+    video { width: 100%; border-radius: 10px; }
+    .social-card { max-width: 420px; width:100%; margin: 1rem auto; border-radius: 12px; display:block; }
+    footer { padding: 1rem; background: var(--panel); font-size: .9rem; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Basket Stablecoin (BSKTx)</h1>
-    <p>Blockchain-native, globally accessible stablecoin backed by real-world assets.</p>
+    <div class="brand">
+      <!-- Put your logo here: ensure the file exists at images/coin-logo.png -->
+      <img src="images/coin-logo.png" alt="BSKTx logo" />
+      <div style="text-align:left">
+        <h1>Basket Stablecoin (BSKTx)</h1>
+        <p>Blockchain-native, globally accessible stablecoin backed by real-world assets.</p>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -81,26 +57,24 @@
     <section>
       <h2>Watch the Demo</h2>
       <video controls poster="images/demo-thumbnail.png">
-        <source src="videos/demo.mp4" type="video/mp4">
+        <source src="videos/demo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>
 
     <section>
-      <h2>Join the DAO</h2>
-      <p>
-        Govern BSKTx by creating and voting on proposals for peg adjustments, basket weight changes, and treasury actions.
-        Fully on-chain governance ensures transparency and decentralization.
-      </p>
-      <a href="https://x.com/BasketStable" target="_blank">
-        <img src="images/social-card.png" alt="Follow Basket Stable on X" class="social-card">
+      <h2>Follow Us</h2>
+      <!-- Make sure this file exists exactly at images/social-card.png -->
+      <a href="https://x.com/BasketStable" target="_blank" rel="noopener">
+        <img src="images/social-card.png" alt="Follow @BasketStable on X" class="social-card" />
       </a>
-      <p><a href="https://x.com/BasketStable" target="_blank">Follow us on X</a></p>
+      <p><a href="https://x.com/BasketStable" target="_blank" rel="noopener">Follow us on X →</a></p>
     </section>
   </main>
 
   <footer>
-    © 2025 Basket Stablecoin (BSKTx) — Built with Chainlink & Base
+    © <span id="y"></span> Basket Stablecoin (BSKTx) — Built with Chainlink & Base
   </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
